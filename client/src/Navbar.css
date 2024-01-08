@@ -1,0 +1,15 @@
+/* Nav bar */
+header {
+    background-color: #FFD700;
+}
+
+.nav-link {
+    font-weight: 600;
+    line-height: 21px;
+    font-size: 18px;
+}
+
+#nav-icon {
+    height: 45px;
+    display: inline;
+}

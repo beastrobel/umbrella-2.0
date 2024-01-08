@@ -1,0 +1,107 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    --dark: black;
+    --medium: #eeeeee;
+    --light: white;
+    --bright: #FFD700;
+    --radius: 50px;
+}
+
+body{
+    background-color: var(--medium);
+}
+
+h3 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+h4 {
+    padding: 30px 0px 20px 20px;
+    font-size: 18px;
+}
+
+/* Search bar */
+.btn-primary {
+    background-color: var(--dark);
+    border-color: var(--dark);
+    border-width: 3px;
+}
+
+.btn-primary:hover {
+    background-color: var(--bright);
+    border-color: var(--bright);
+    border-width: 3px;
+}
+
+#searchLink {
+    text-decoration:none;
+}
+
+/* Daily Forecast Card */
+.card {
+    border: none;
+    box-shadow: 2px 2px 5px #e1e1e1; 
+    margin-top: 5px;
+    padding: 30px;
+    display: block;
+}
+
+.card-title {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+#yourTemp {
+    font-size: 80px;
+    font-weight: 600;
+    display: block;
+}
+
+#weekday {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#weekday-temp{
+    font-size: 40px;
+    font-weight: 600;
+    display: block;
+}
+
+#weatherIcon {
+    width: 150px;
+    margin-top: -50px;
+    margin-bottom: -20px;
+    
+}
+
+#umbrella {
+    font-family: 'Pacifico', sans-serif;
+    font-size: 24px;
+}
+
+#five-day-forecast{
+    padding-bottom: 50px;
+}
+
+/* Favorite Locations Section */
+a {
+    text-decoration: none;
+}
+
+#favorite-locations{
+    padding-bottom: 50px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark);
+    color: var(--light);
+    font-weight: 500;
+    margin-bottom:0;
+    text-align: center;
+    padding: 100px 50px;
+}
+
+/* Media queries */
