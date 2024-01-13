@@ -4,15 +4,13 @@ function Daily() {
     return (
         <section id="daily-forecast">
             <div className="hero-image">
-                <div className="hero-location">
-                    <p id="yourLocation">NO LOCATION AVAILABLE</p>
-                </div>
                 <div className="hero-text">
-                    <img src="" id="weatherIcon"/>
-                    <h1 class="hero-header" id="yourTemp">--°F</h1>
-                    <p id="yourWeather">No Data Available</p><br/>
+                    <p id="yourLocation">GRAND RAPIDS, MI</p><br/><br/>
+                    <img src="https://openweathermap.org/img/wn/13d@2x.png" id="weatherIcon"/>
+                    <h1 class="hero-header" id="yourTemp">32°F</h1>
+                    <p id="yourWeather">Snow</p><br/>
                 </div>
-            </div>        
+            </div>    
         </section>
     );
 }    
