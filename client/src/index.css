@@ -9,6 +9,8 @@
 
 body{
     background-color: var(--medium);
+    margin: 0px;
+    padding: 0px;
 }
 
 h3 {
@@ -93,15 +95,3 @@ a {
 #favorite-locations{
     padding-bottom: 50px;
 }
-
-/* Footer */
-footer {
-    background-color: var(--dark);
-    color: var(--light);
-    font-weight: 500;
-    margin-bottom:0;
-    text-align: center;
-    padding: 100px 50px;
-}
-
-/* Media queries */

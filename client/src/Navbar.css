@@ -1,6 +1,5 @@
-/* Nav bar */
 header {
-    background-color: #FFD700;
+    background-color: var(--bright);
 }
 
 .nav-link {

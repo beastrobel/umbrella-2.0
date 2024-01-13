@@ -5,7 +5,6 @@ const location = "New York";
 
 function Home() {
     return(
-        <section>
             <div className="hero-image">
                 <div className="hero-text">
                     <h1 id="hero-header">Umbrella Weather</h1>
@@ -24,7 +23,6 @@ function Home() {
 
                 </div>
             </div>
-        </section>
     );
 }
 

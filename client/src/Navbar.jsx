@@ -1,4 +1,6 @@
-import { Link, useMatch, useResolvedPath } from "react-router-dom"
+import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import './Navbar.css';
+
 function Navbar() {
     return(
         <header>
