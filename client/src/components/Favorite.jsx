@@ -1,7 +1,7 @@
 function Favorite() {
     return (
     <section id="favorite-locations">
-        <h4>FAVORITE LOCATIONS</h4>
+        <h2>FAVORITE LOCATIONS</h2>
         <ul class="list-group" id="favLocation">
         </ul><br/>
     </section>

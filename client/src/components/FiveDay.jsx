@@ -1,7 +1,7 @@
 function FiveDay() {
     return (
         <section id="five-day-forecast">
-            <h4>5-DAY FORECAST</h4>
+            <h2>5-DAY FORECAST</h2>
             <div class="row justify-content-between">  
                 <div class="card col-sm-12 col-md-12 col-lg-2" id="day-1">
                     <p class="card-text text-left" id="weekday"></p>

@@ -1,5 +1,6 @@
 header {
-    background-color: var(--bright);
+    background-color: rgba(0, 0, 0, 0.247);
+    height: 50px;
 }
 
 .nav-link {
@@ -8,7 +9,8 @@ header {
     font-size: 18px;
 }
 
-#nav-icon {
-    height: 45px;
-    display: inline;
+#brand {
+    color: var(--light);
+    font-family: pacifico;
+    font-size: 24px;
 }
