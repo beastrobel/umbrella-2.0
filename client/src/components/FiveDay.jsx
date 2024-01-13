@@ -1,12 +1,6 @@
 function FiveDay() {
     return (
         <section id="five-day-forecast"><br/><br/>
-        {/* temp form for testing */}
-        <form class="form-group" id="location-search">
-        <input class="form-control form-control-lg" type="text" placeholder="City" id="searchBar" /><br/>
-        <button type="submit" class="btn btn-primary" id="searchButton">search</button>
-        </form> 
-
             <h2>5-DAY FORECAST</h2>
             <div class="row justify-content-between">  
                 <div class="card col-sm-12 col-md-12 col-lg-2" id="day-1">

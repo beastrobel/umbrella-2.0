@@ -3,10 +3,19 @@ header {
     height: 50px;
 }
 
+label {
+    font-weight: 600;
+    line-height: 21px;
+    font-size: 18px;
+    color: var(--light);
+    display: block;
+}
+
 .nav-link {
     font-weight: 600;
     line-height: 21px;
     font-size: 18px;
+    color: var(--light);
 }
 
 #brand {
@@ -19,3 +28,37 @@ header {
     color: white;
     height: 38px;
 }
+
+.navbar-toggler{
+    border: none;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Search bar */
+#search-bar {
+    border-radius: 30px 0px 0px 30px;
+    border: none;
+    width: 200px;
+    padding-top: 10px;
+    padding-left: 5px;
+    display: inline;
+  }
+  
+  #search-button {
+    border-radius: 0px 30px 30px 0px;
+    background-color: rgba(0, 0, 0, 0.247);
+    border: none;
+    width: 40px;
+    display:inline;
+  }
+
+  #search-bar-icon{
+    color:var(--light);
+    padding-top: 3px;
+  }
