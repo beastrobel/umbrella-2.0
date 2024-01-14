@@ -1,9 +1,8 @@
-function Location() {
-    const myLocation = localStorage.getItem('location');
+function Location(props) {
 
     return(
         <>
-        <p id="yourLocation">{myLocation.toUpperCase()}</p><br/><br/>
+        <p id="yourLocation">{props.location}</p><br/><br/>
         </>
     )
 };

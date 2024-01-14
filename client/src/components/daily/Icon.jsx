@@ -1,7 +1,7 @@
-function Icon() {
+function Icon(props) {
     return(
         <>
-        <img src="https://openweathermap.org/img/wn/13d@2x.png" id="weatherIcon"/>
+        <img src={`https://openweathermap.org/img/wn/${props.icon}@2x.png`} id="weatherIcon"/>
         </>
     )
 };

@@ -1,7 +1,7 @@
-function Weather() {
+function Weather(props) {
     return(
         <>
-        <p id="yourWeather">Snow</p><br/>
+        <p id="yourWeather">{props.weather}</p><br/>
         </>
     )
 };

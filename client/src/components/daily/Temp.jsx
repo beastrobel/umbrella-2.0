@@ -1,7 +1,7 @@
-function Temp() {
+function Temp(props) {
     return(
         <>
-        <h1 className="hero-header" id="yourTemp">32°F</h1>
+        <h1 className="hero-header" id="yourTemp">{props.temperature}°F</h1>
         </>
     )
 };
