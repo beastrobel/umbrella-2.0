@@ -3,36 +3,47 @@ import Location from './Location';
 import Icon from './Icon';
 import Temp from './Temp';
 import Weather from './Weather';
-
-const daily = {
-    location: 'New York',
-    temperature: 32,
-    weather: 'snow',
-    icon: '13d'
-}
+import {useState, useEffect} from 'react'
 
 function Daily() {
+    const initialDaily = {
+        location: localStorage.getItem('location'),
+        temperature: 32,
+        weather: 'Rain',
+        icon: '13d'
+    }
 
-    // fetch ('https://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=0282671f74388449f4d4c1e0b2dbe75e&units=imperial')
-    //     .then(function (response) {
-    //         return response.json();
-    //       })
-    //       .then(function (data) {
-    //         console.log(data);
-    //       })
+    const [daily, setDaily] = useState([initialDaily]);
 
+    useEffect(() => {
+    fetch ('https://api.openweathermap.org/data/2.5/weather?q=' + initialDaily.location + '&appid=0282671f74388449f4d4c1e0b2dbe75e&units=imperial')
+        .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+            let daily = {
+                location: data.name,
+                temperature: data.main.temp,
+                weather: data.weather[0].description,
+                icon: data.weather[0].icon
+            }
+            setDaily([daily]);
+          })
+         .catch(error => console.error(error))
+    }, []);
+    
     return (
         <section id="daily-forecast">
             <div className="hero-image">
                 <div className="hero-text">
-                    <Location location={daily.location}/>
-                    <Icon icon={daily.icon} />
-                    <Temp temperature={daily.temperature} />
-                    <Weather weather={daily.weather} />
+                    <Location location={daily[0].location.toUpperCase()}/>
+                    <Icon icon={daily[0].icon} />
+                    <Temp temperature={parseInt(daily[0].temperature)} />
+                    <Weather weather={daily[0].weather} />
                 </div>
             </div>    
         </section>
     );
-}    
+ }    
 
 export default Daily;

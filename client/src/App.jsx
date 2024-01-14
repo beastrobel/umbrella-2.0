@@ -7,7 +7,7 @@ function App() {
 return (
     <>
     <Navbar/>
-    <Daily/>
+    <Daily />
     <div className="container">    
     </div>
     <Footer/>
