@@ -5,7 +5,6 @@ function Form() {
     const [location, setLocation] = useState('');
 
     const handleInputChange = (e) => {
-        // Getting the value and name of the input which triggered the change
         const { target } = e;
         const inputValue = target.value;
         setLocation(inputValue);
@@ -18,7 +17,15 @@ function Form() {
             return;
         }
         console.log(`Your location: ${location}`);
+        localStorage.setItem('location', location);
         setLocation('');
+        fetch ('https://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=0282671f74388449f4d4c1e0b2dbe75e&units=imperial')
+        .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+            console.log(data);
+          })
     };
 
     return(
