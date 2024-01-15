@@ -1,13 +1,15 @@
 import './Form.css';
-import { useState } from 'react';
+import { useState } from 'react';  
 
 function Form() {
     const [location, setLocation] = useState('');
+    const [mylocation, setMyLocation] = useState('London');
 
     const handleInputChange = (e) => {
         const { target } = e;
         const inputValue = target.value;
         setLocation(inputValue);
+        setMyLocation(inputValue);
     }    
 
     const handleFormSubmit = (e) => {
@@ -21,6 +23,7 @@ function Form() {
         setLocation('');
     };
 
+
     return(
         <>
         <form id="location-search" onSubmit={handleFormSubmit}>
@@ -30,7 +33,6 @@ function Form() {
                 name="location"
                 onChange={handleInputChange}
                 type="text"
-                placeholder="location"
                 id="search-bar"
             />
             <button type="submit" id="search-button" aria-label="search"><span className="material-symbols-outlined" id="search-bar-icon">search</span></button>
@@ -40,3 +42,4 @@ function Form() {
 }
 
 export default Form;
+

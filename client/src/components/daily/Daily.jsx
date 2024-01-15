@@ -3,11 +3,15 @@ import Location from './Location';
 import Icon from './Icon';
 import Temp from './Temp';
 import Weather from './Weather';
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useContext} from 'react';
+import { LocationContext } from '../../utils/LocationContext'; 
 
 function Daily() {
+    const myLocation = useContext(LocationContext);
+    console.log(myLocation);
+
     const initialDaily = {
-        location: localStorage.getItem('location'),
+        location: myLocation,
         temperature: 32,
         weather: 'Rain',
         icon: '13d'
@@ -31,7 +35,7 @@ function Daily() {
           })
          .catch(error => console.error(error))
     }, []);
-    
+  
     return (
         <section id="daily-forecast">
             <div className="hero-image">
