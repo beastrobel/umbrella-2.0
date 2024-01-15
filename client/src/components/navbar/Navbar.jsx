@@ -1,8 +1,8 @@
 import './Navbar.css';
-import Form from './Form';
+import './Form.css';
 import ToggleButton from './ToggleButton';
 
-export default function Navbar() {
+export default function Navbar(props) {
     return(
         <header>
             <nav className="navbar navbar-dark">
@@ -11,7 +11,17 @@ export default function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav">
-                            <Form />
+                        <form id="location-search" onSubmit={props.handleFormSubmit}>
+                            <label label="true" htmlFor="search-bar">Search by city or zipcode</label>
+                            <input
+                                value={props.value}
+                                name="location"
+                                onChange={props.handleInputChange}
+                                type="text"
+                                id="search-bar"
+                            />
+                            <button type="submit" id="search-button" aria-label="search"><span className="material-symbols-outlined" id="search-bar-icon">search</span></button>
+                        </form>
                         </li>
                     </ul>
                 </div>

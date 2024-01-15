@@ -1,9 +1,8 @@
 import Day from './Day';
-import { useState, useEffect, useContext } from 'react';
-import { LocationContext } from '../../utils/LocationContext'; 
+import { useState, useEffect } from 'react';
 
-function FiveDay() {
-    const myLocation = useContext(LocationContext);
+function FiveDay(props) {
+    const myLocation = props.location ;
     console.log(myLocation);
 
     useEffect(() => {

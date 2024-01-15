@@ -1,37 +1,14 @@
 import './Form.css';
-import { useState } from 'react';  
 
-function Form() {
-    const [location, setLocation] = useState('');
-    const [mylocation, setMyLocation] = useState('London');
-
-    const handleInputChange = (e) => {
-        const { target } = e;
-        const inputValue = target.value;
-        setLocation(inputValue);
-        setMyLocation(inputValue);
-    }    
-
-    const handleFormSubmit = (e) => {
-    e.preventDefault();
-        if (location == null) {
-            setErrorMessage('Location is invalid');
-            return;
-        }
-        console.log(`Your location: ${location}`);
-        localStorage.setItem('location', location);
-        setLocation('');
-    };
-
-
+function Form(props) {
     return(
         <>
-        <form id="location-search" onSubmit={handleFormSubmit}>
-            <label label="true" htmlFor="search-bar">Search by city or zipcode</label>
+        <form id="location-search" onSubmit={props.handleFormSubmit}>
+            <label label="true" htmlFor="search-bar">Search by city</label>
             <input
                 value={location}
                 name="location"
-                onChange={handleInputChange}
+                onChange={props.handleInputChange}
                 type="text"
                 id="search-bar"
             />
