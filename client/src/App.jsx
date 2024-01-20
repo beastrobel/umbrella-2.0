@@ -48,10 +48,12 @@ function App() {
             icon: data.weather[0].icon
         }
         setDaily([dailyWeather]);
+        setLocation('');
       })
      .catch(error => console.error(error))
     }
     console.log(daily);
+
     return (
         <>
         <Navbar

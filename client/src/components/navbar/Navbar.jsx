@@ -6,8 +6,8 @@ export default function Navbar(props) {
     return(
         <header>
             <nav className="navbar navbar-dark">
-                <ToggleButton />
-                <p id="brand" className="mx-auto d-block">Umbrella</p>
+                <ToggleButton />                
+                <p className="navbar-brand">Umbrella</p>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav">
