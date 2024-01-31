@@ -1,7 +1,7 @@
-# Umbrella Weather App
+# Umbrella 2.0
 
 ## Description
-The challenge was to design and develop a weather dashboard web application powered by OpenWeatherMap APIs. Umbrella allows users to search weather data by city, and it saves the user's searched locations in local storage.
+Umbrella is a single page web application built with React and powered by OpenWeatherMap APIs. Umbrella allows users to search weather data by city, and it returns the temperature, a weather icon, and the weather description.
 
 ## Usage
 The website’s URL is https://umbrella-weather.onrender.com. Screenshots can be viewed below. In order to use the Umbrella app, allow location access to view local weather, or use the search bar to look up weather by city. The repository for this project can be found at https://github.com/beastrobel/umbrella-2.0.
